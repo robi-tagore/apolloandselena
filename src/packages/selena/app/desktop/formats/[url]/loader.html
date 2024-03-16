@@ -1,0 +1,111 @@
+
+
+
+
+<body>
+    
+    <div class="loaderFrame">
+        <div class="sun">
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+        <div class="sun1">
+            <div class="mars">
+                <div class="moon"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+<style>
+
+
+    :root{
+        --frameSize : 100px
+    }
+
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loaderFrame{
+        height: var(--frameSize);
+        width: var(--frameSize);
+    }
+
+    @keyframes rotateSystem {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+
+    .sun{
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+
+        background-color: rgb(160, 160, 160);
+
+        animation: rotateSystem 7.5s linear infinite;
+    }
+
+
+    .earth{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+
+        background-color: rgb(190, 190, 190);
+        position: relative;
+        right: 28px ;
+        animation: rotateSystem .5s linear infinite;
+
+    }
+
+
+
+    .moon{
+        height: 8px;
+        width: 8px;
+        border-radius: 100%;
+
+        background-color: rgb(190, 190, 190);
+        position: relative;
+        right: 8px ;
+    }
+
+    .sun1{
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+
+        top: -50px;
+        position: relative;
+        background-color: rgb(160, 160, 160);
+
+        animation: rotateSystem 14s linear infinite;
+    }
+
+
+    .mars{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+
+        background-color: rgb(255, 106, 106);
+        position: relative;
+        right: calc(28px + 30px);
+        animation: rotateSystem .5s linear infinite;
+    }
+
+
+
+
+</style>

@@ -1,0 +1,10 @@
+{
+  "include" : ["*.ts","*/**.ts","*/**/***.ts","*/**/***/****.ts"],
+  "exclude" : ["node_modules"],
+  "compilerOptions" : {
+    "strict": true,
+    "outDir" : "dist",
+    "esModuleInterop" : true,
+    "lib" : ["es2021"]
+  }
+}

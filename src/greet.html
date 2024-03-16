@@ -1,0 +1,122 @@
+<html>
+  <body>
+    <div class="cont">
+      <div>
+        <span style="font-size: 5rem; font-family: 'Product Sans Bold'"
+          >🙭
+        </span>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <div style="font-size: 1.25rem; font-family: 'Product Sans Regular'">
+          HD Youtube Downloader
+        </div>
+        <div style="font-size: 1.75rem; font-family: 'Product Sans Regular'">
+          Apollo & Selena
+        </div>
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<link rel="stylesheet" href="./app_comp/fonts/fonts.css" />
+
+<style>
+
+  :root{
+    /* --cb:#8E1ED8;
+    --cf:#D8D81E; */
+    --cb:rgb(125, 125, 125);
+    --cf:rgba(255,255,255,1);
+  }
+
+  body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cf);
+    border-radius: 12px;
+    color: var(--cb);
+  }
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0 0 0;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 2px solid var(--cb);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 2s linear infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.25s;
+  }
+    .lds-ripple div:nth-child(3) {
+    animation-delay: -0.5s;
+  }
+      .lds-ripple div:nth-child(4) {
+    animation-delay: -0.75s;
+  }
+
+
+  
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+</style>

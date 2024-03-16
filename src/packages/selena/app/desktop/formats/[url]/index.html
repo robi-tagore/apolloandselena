@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader - Earth, Moon, and Sun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 60px;
+            /* Width of the container */
+            position: relative;
+        }
+
+        .sun {
+            width: 40px;
+            /* Smaller size for the sun */
+            height: 40px;
+            background-color: #ccc;
+            /* Light gray color for the sun */
+            border-radius: 50%;
+            position: relative;
+            animation: sun-rotation 8s linear infinite;
+            margin: 10px auto;
+            /* Center the sun horizontally */
+        }
+
+        .earth {
+            width: 20px;
+            /* Smaller size for the Earth */
+            height: 20px;
+            background-color: #444;
+            /* Dark gray color for the Earth */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Adjusted position to create space between Earth and Sun */
+            transform: translate(-50%, -50%);
+            animation: earth-rotation 4s linear infinite;
+        }
+
+        .moon {
+            width: 10px;
+            height: 10px;
+            background-color: #ddd;
+            /* Light gray color for the moon */
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            /* Adjust position */
+            left: 50%;
+            /* Center the moon */
+            transform: translateX(-50%);
+            animation: moon-rotation 2s linear infinite;
+        }
+
+        @keyframes sun-rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes earth-rotation {
+            0% {
+                transform: translate(-80px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-80px) rotate(360deg);
+            }
+        }
+
+        @keyframes moon-rotation {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="sun">
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+
+</html>
